@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aadhaar Authentication</title>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    background-image: url("Mango.jpg");
+    width: 50%;
+    margin-left: 450px;
+  }
+  input[type=text]{
+    width: 400px;
+    padding: 10px;
+    border:none;
+    border-radius: 5px;
+}
+button{
+  margin-left: 170px;
+  margin-top: 30px;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  background-color: #ef6c57;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+button:hover{
+   background-color: #010a43;
+}
+.next{
+  color: white;
+  background-color: #ef6c57;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+</style>
+</head>
+<body>
+  <br>
+  <br>
+  <h1>Enter Voter's Aadhaar Number</h1>
+  <br>
+	<form class="form">
+		<input type="text" class="inputnumber" id="number" placeholder="Enter Aadhaar Number">
+		<div><button value="submit">Submit</button></d iv>
+  </form>
+  <p class="validation" style="color: red;font-weight: bold;margin-left: 120px;"></p>
+  <br>
+  <br>
+
+  <div class="voted">
+  </div>
+  <!-- <button class="buttonnext" style="display: none;transform: translate(0,-60px);"><a href="index.html" style="text-decoration: none;color: white;"></a>Save</button> -->
+	<br>
+	<br>
+	<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAZ9cy4hV29LLdSlNUzN7dhsCYslLQYANY",
+    authDomain: "voting-df75e.firebaseapp.com",
+    databaseURL: "https://voting-df75e.firebaseio.com",
+    projectId: "voting-df75e",
+    storageBucket: "voting-df75e.appspot.com",
+    messagingSenderId: "1097940127481",
+    appId: "1:1097940127481:web:31903635ecd62349159c28"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db=firebase.firestore();
+</script>
+<!-- <script type="text/javascript" src="voting.js"></script> -->
+<script type="text/javascript" src="voting1.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>State Assembly Election 2k20</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      h1{
+        background-color: #ffffff;
+        color: black;
+        padding: 8px 5px;
+        border-radius: 10px;
+      }
+      .verify{
+        margin: 20px 0px 0px 280px;
+        color: white;
+        background-color: #ef6c57;
+        padding: 8px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        border: 1px solid transparent;
+      }
+      .verify:hover{
+        background-color: #010a43;
+      }
+      .verify a:hover{
+        text-decoration: none;
+      }
+      h3{
+        margin: auto;
+        text-align: center;
+        width: 400px;
+        background-color: #010a43;
+        color: white;
+        padding: 8px 1px;
+        border-radius: 10px;
+      }
+      .hero{
+        height:800px;
+        margin: auto;
+        border-radius: 5px;
+        box-shadow: 0 5px 20px #777;
+      }
+      body{
+        background-image: url("Mango.jpg");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+    <div class="container" style="width: 650px;">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="text-center">State Assembly Election</h1>
+          <h2 style="font-weight: bold;text-align: center;text-decoration: underline;">Consituency: perundurai</h2>
+          <br>
+          <h3>Aadhar Biometric Verfication</h3>
+          <br/>
+          <div id="loader">
+            <button type="submit" class="verify"><a href="verify.html" style="color: white;font-size: 20px;" class="linktext">Verify</a></button>
+            <h4 class="text-center" style="color:;padding: 10px;border-radius: 5px;font-weight: bold;">Candidate List will appear on successful biometric verification</h4>
+          </div>
+          <div id="content" style="display: none;">
+            <h4 style="text-align: center;">Voter's Biometric successfully Verified</h4>
+            <h3>Candidate List</h3>
+            <br>
+            <table class="table" style="border:1px solid black;border-radius: 5px;">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Votes</th>
+                </tr>
+              </thead>
+              <tbody id="candidatesResults">
+              </tbody>
+            </table>
+            <hr/>
+            <form onSubmit="App.castVote(); return false;">
+              <div class="form-group">
+                <label for="candidatesSelect">Select Candidate</label>
+                <select class="form-control" id="candidatesSelect">
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary">Vote</button>
+              <hr />
+            </form>
+            <p id="accountAddress" class="text-center" style="font-weight: bold;background-color: white"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="voting.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
